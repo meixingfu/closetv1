@@ -185,10 +185,10 @@ footer {
 
 <footer>♡ mycloset ♡</footer>
 
-<script>
+<script src="outfits.js"></script>
 // お洋服を追加するときは、この配列の中にデータを追加します。
 // 画像はGitHubにアップロードした画像のURLを指定できます。
-const outfits = [];
+const outfits = window.outfits || [];
 
 let category = 'all';
 let favorites = JSON.parse(localStorage.getItem('mycloset-favorites') || '[]');
