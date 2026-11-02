@@ -1,4 +1,3 @@
-
 window.outfits = [
   {
     id: "outfit-001",
