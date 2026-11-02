@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mycloset ♡</title>
+<style>
+:root {
+  --pink:#c58da5;
+  --deep:#98677f;
+  --pale:#f5e7ed;
+  --ivory:#fffaf5;
+  --text:#79616a;
+  --line:#e8d4dc;
+}
+* {box-sizing:border-box;}
+body {
+  margin:0;
+  color:var(--text);
+  background:
+    radial-gradient(circle,#ead7df 1px,transparent 1.5px);
+  background-size:32px 32px;
+  background-color:var(--ivory);
+  font-family:Georgia,"Yu Mincho",serif;
+}
+header {
+  position:relative;
+  text-align:center;
+  padding:50px 15px 35px;
+  background:linear-gradient(135deg,#f1dfe6,#fffaf5,#f0dce4);
+  border-bottom:3px double var(--line);
+  overflow:hidden;
+}
+header:before,header:after {
+  content:"🎀";
+  position:absolute;
+  top:35px;
+  font-size:42px;
+}
+header:before {left:7%;}
+header:after {right:7%;}
+.ornament {color:#bd829b;letter-spacing:7px;}
+header h1 {
+  color:#ad7790;
+  font-size:clamp(42px,9vw,65px);
+  font-weight:normal;
+  letter-spacing:4px;
+  margin:12px 0 5px;
+}
+.subtitle {
+  color:#a78391;
+  font-size:10px;
+  letter-spacing:4px;
+}
+.header-note {
+  margin-top:22px;
+  font-size:11px;
+  color:#ad8795;
+  letter-spacing:2px;
+}
+main {
+  max-width:1050px;
+  margin:auto;
+  padding:28px 17px 60px;
+}
+.intro {
+  text-align:center;
+  line-height:2;
+  font-size:13px;
+  padding:20px 12px;
+  border:1px solid var(--line);
+  outline:1px solid #f1e4e9;
+  outline-offset:4px;
+  background:#fffdfb;
+  margin:8px 4px 30px;
+}
+.heart {color:#c58da5;font-size:20px;}
+.section-title {
+  text-align:center;
+  color:#ad7790;
+  font-size:21px;
+  font-weight:normal;
+  letter-spacing:3px;
+  margin:30px 0 18px;
+}
+.section-title small {
+  display:block;
+  font-size:9px;
+  letter-spacing:3px;
+  margin-top:5px;
+  color:#bd9ba8;
+}
+.search {
+  width:100%;
+  border:1px solid var(--line);
+  padding:14px 18px;
+  background:#fffdfb;
+  color:var(--text);
+  font-size:13px;
+  outline:none;
+  box-shadow:inset 0 0 0 3px #faf2f5;
+}
+.search:focus {border-color:var(--pink);}
+.filters {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:9px;
+  margin:18px 0 28px;
+}
+.filters button {
+  background:#fffdfb;
+  color:#a87c8e;
+  border:1px solid var(--line);
+  padding:10px 16px;
+  font-family:inherit;
+  font-size:12px;
+  cursor:pointer;
+}
+.filters button.active {
+  background:#d6b0bf;
+  color:white;
+  border-color:#d6b0bf;
+}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+}
+.card {
+  position:relative;
+  background:#fffdfb;
+  border:1px solid #e8d5dd;
+  padding:8px;
+  box-shadow:0 5px 15px #b88da515;
+}
+.card-inner {
+  border:1px solid #f0e1e7;
+  padding:10px;
+  position:relative;
+}
+.image {
+  height:150px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,#f5e7ed,#fffaf5,#f0e0e7);
+  border:1px solid #eee0e6;
+  color:#bd8ca2;
+  font-size:42px;
+}
+.favorite {
+  position:absolute;
+  top:15px;
+  right:15px;
+  z-index:2;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  border:1px solid var(--line);
+  background:#fffaf5;
+  color:#c58da5;
+  font-size:19px;
+  cursor:pointer;
+}
+.favorite.active {
+  background:#d6b0bf;
+  color:white;
+}
+.card-content {padding:13px 5px 7px;}
+.tag {
+  color:#bd8ba2;
+  font-size:10px;
+  letter-spacing:2px;
+}
+.card h3 {
+  color:#986e81;
+  font-weight:normal;
+  font-size:18px;
+  margin:8px 0;
+}
+.card p {
+  font-size:12px;
+  line-height:1.8;
+  min-height:40px;
+}
+.copy {
+  width:100%;
+  padding:11px;
+  background:linear-gradient(90deg,#c994aa,#dfb9c8);
+  color:white;
+  border:1px solid #d2a6b8;
+  font-family:inherit;
+  letter-spacing:2px;
+  cursor:pointer;
+}
+.empty {
+  text-align:center;
+  padding:35px;
+  color:#bd8ba2;
+  grid-column:1/-1;
+}
+footer {
+  text-align:center;
+  padding:30px 12px;
+  border-top:3px double var(--line);
+  background:#f7edf1;
+  color:#a98293;
+  font-size:11px;
+  letter-spacing:2px;
+  line-height:2.2;
+}
+@media(max-width:480px) {
+  header {padding:45px 10px 30px;}
+  header:before,header:after {font-size:28px;top:17px;}
+  .grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
+  .image {height:115px;}
+  .card h3 {font-size:15px;}
+  .card p {font-size:11px;}
+  .filters button {padding:8px 12px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="ornament">୨୧ ♡ ୨୧ ♡ ୨୧</div>
+  <h1>mycloset</h1>
+  <div class="subtitle">MY LITTLE DOLLCORE WARDROBE</div>
+  <div class="header-note">✧ A COLLECTION OF LOVELY OUTFITS ✧</div>
+  <div class="ornament" style="margin-top:20px">♡ ───── 🎀 ───── ♡</div>
+</header>
+
+<main>
+  <div class="intro">
+    <div class="heart">୨୧ ♡ ୨୧</div>
+    Welcome to my little closet.<br>
+    お気に入りのお洋服とプロンプトを集めた、<br>
+    小さなアンティークドールのお部屋。<br>
+    <div class="heart">✧ Find your favorite outfit ✧</div>
+  </div>
+
+  <h2 class="section-title">
+    ♡ My Collection ♡
+    <small>MY LITTLE WARDROBE</small>
+  </h2>
+
+  <input class="search" id="search"
+    placeholder="♡ お洋服・キーワードを検索...">
+
+  <div class="filters" id="filters">
+    <button class="active" data-category="all">All</button>
+    <button data-category="男の子">Boys ♡</button>
+    <button data-category="女の子">Girls ♡</button>
+    <button data-category="共通">Unisex ♡</button>
+    <button data-category="♡">♡ Favorites</button>
+  </div>
+
+  <div class="grid" id="grid"></div>
+</main>
+
+<footer>
+  ୨୧ ───── ♡ ───── ୨୧<br>
+  mycloset<br>
+  A LITTLE WORLD FULL OF RIBBONS & ROSES<br>
+  ୨୧ ───── ♡ ───── ୨୧
+</footer>
+
+<script>
+const outfits = [
+  {
+    name:"Sweet Doll Dress",
+    category:"女の子",
+    model:"SDXL",
+    description:"リボンとレースをたっぷり使ったドールドレス。",
+    prompt:"masterpiece, best quality, 1girl, sweet doll dress, frilly lace, satin ribbons, pearl ornaments, layered skirt, elegant pink and white color palette"
+  },
+  {
+    name:"Gothic Prince",
+    category:"男の子",
+    model:"SDXL",
+    description:"黒レースと装飾が美しいゴシック衣装。",
+    prompt:"masterpiece, best quality, 1boy, gothic prince outfit, black lace, velvet ribbons, ornate jacket, elegant gothic fashion"
+  },
+  {
+    name:"Antique Ribbon",
+    category:"共通",
+    model:"SDXL",
+    description:"男女どちらにも使えるクラシカルな衣装。",
+    prompt:"masterpiece, best quality, elegant antique fashion, ivory lace, satin ribbon, pearl details, vintage clothing, delicate frills"
+  }
+];
+
+let selected = "all";
+let favorites = JSON.parse(localStorage.getItem("mycloset-favorites") || "[]");
+
+function render() {
+  const query = document.getElementById("search").value.toLowerCase();
+
+  const filtered = outfits.filter((item,index) => {
+    const categoryMatch =
+      selected === "all" ||
+      (selected === "♡" && favorites.includes(index)) ||
+      item.category === selected;
+
+    const textMatch =
+      (item.name + item.description + item.prompt + item.model)
+      .toLowerCase().includes(query);
+
+    return categoryMatch && textMatch;
+  });
+
+  document.getElementById("grid").innerHTML =
+    filtered.map(item => {
+      const index = outfits.indexOf(item);
+      const isFavorite = favorites.includes(index);
+
+      return `
+      <article class="card">
+        <div class="card-inner">
+          <button class="favorite ${isFavorite ? "active" : ""}"
+            data-favorite="${index}">
+            ${isFavorite ? "♥" : "♡"}
+          </button>
+          <div class="image">🎀</div>
+          <div class="card-content">
+            <div class="tag">${item.category} ♡ ${item.model}</div>
+            <h3>${item.name}</h3>
+            <p>${item.description}</p>
+            <button class="copy" data-copy="${index}">
+              ♡ COPY PROMPT ♡
+            </button>
+          </div>
+        </div>
+      </article>`;
+    }).join("") || '<div class="empty">♡ No outfits found ♡</div>';
+}
+
+document.getElementById("search").addEventListener("input",render);
+
+document.getElementById("filters").addEventListener("click",e=>{
+  if(!e.target.matches("button")) return;
+  selected=e.target.dataset.category;
+
+  document.querySelectorAll(".filters button").forEach(button=>{
+    button.classList.toggle("active",button===e.target);
+  });
+  render();
+});
+
+document.getElementById("grid").addEventListener("click",async e=>{
+  const favoriteButton=e.target.closest("[data-favorite]");
+  if(favoriteButton) {
+    const index=Number(favoriteButton.dataset.favorite);
+
+    if(favorites.includes(index)) {
+      favorites=favorites.filter(i=>i!==index);
+    } else {
+      favorites.push(index);
+    }
+
+    localStorage.setItem("mycloset-favorites",JSON.stringify(favorites));
+    render();
+    return;
+  }
+
+  const copyButton=e.target.closest("[data-copy]");
+  if(copyButton) {
+    const index=Number(copyButton.dataset.copy);
+
+    try {
+      await navigator.clipboard.writeText(outfits[index].prompt);
+      copyButton.textContent="♡ COPIED! ♡";
+    } catch {
+      copyButton.textContent="COPY FAILED";
+    }
+  }
+});
+
+render();
+</script>
+</body>
+</html>
