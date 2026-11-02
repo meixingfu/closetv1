@@ -4,379 +4,312 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>mycloset ♡</title>
+<title>mycloset</title>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;600&display=swap');
+
 :root {
-  --pink:#c58da5;
-  --deep:#98677f;
-  --pale:#f5e7ed;
-  --ivory:#fffaf5;
-  --text:#79616a;
-  --line:#e8d4dc;
+  --pink:#d6aeb8;
+  --deep:#a97888;
+  --pale:#f8edf0;
+  --cream:#fffaf6;
+  --ink:#715b61;
 }
-* {box-sizing:border-box;}
+* {box-sizing:border-box}
 body {
   margin:0;
-  color:var(--text);
+  color:var(--ink);
   background:
-    radial-gradient(circle,#ead7df 1px,transparent 1.5px);
-  background-size:32px 32px;
-  background-color:var(--ivory);
-  font-family:Georgia,"Yu Mincho",serif;
+    radial-gradient(ellipse at top,#fff 0%,transparent 65%),
+    #f7eef0;
+  font-family:'Noto Serif JP',serif;
 }
 header {
-  position:relative;
   text-align:center;
-  padding:50px 15px 35px;
-  background:linear-gradient(135deg,#f1dfe6,#fffaf5,#f0dce4);
-  border-bottom:3px double var(--line);
-  overflow:hidden;
+  padding:43px 15px 27px;
+  background:rgba(255,250,246,.8);
+  border-bottom:1px solid #ead6dc;
 }
-header:before,header:after {
-  content:"🎀";
-  position:absolute;
-  top:35px;
-  font-size:42px;
+.decor {color:#c995a5;letter-spacing:7px;font-size:13px}
+h1 {
+  margin:10px 0 2px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:54px;
+  font-weight:500;
+  letter-spacing:5px;
+  color:#a97989;
 }
-header:before {left:7%;}
-header:after {right:7%;}
-.ornament {color:#bd829b;letter-spacing:7px;}
-header h1 {
-  color:#ad7790;
-  font-size:clamp(42px,9vw,65px);
-  font-weight:normal;
-  letter-spacing:4px;
-  margin:12px 0 5px;
-}
-.subtitle {
-  color:#a78391;
-  font-size:10px;
-  letter-spacing:4px;
-}
-.header-note {
-  margin-top:22px;
-  font-size:11px;
-  color:#ad8795;
-  letter-spacing:2px;
-}
-main {
-  max-width:1050px;
-  margin:auto;
-  padding:28px 17px 60px;
-}
+.subtitle {font-size:9px;letter-spacing:3px;color:#b9949e}
+.ribbon {font-size:22px;margin-top:12px}
+main {max-width:1000px;margin:auto;padding:25px 16px 60px}
 .intro {
   text-align:center;
+  font-size:12px;
   line-height:2;
-  font-size:13px;
-  padding:20px 12px;
-  border:1px solid var(--line);
-  outline:1px solid #f1e4e9;
-  outline-offset:4px;
-  background:#fffdfb;
-  margin:8px 4px 30px;
-}
-.heart {color:#c58da5;font-size:20px;}
-.section-title {
-  text-align:center;
-  color:#ad7790;
-  font-size:21px;
-  font-weight:normal;
-  letter-spacing:3px;
-  margin:30px 0 18px;
-}
-.section-title small {
-  display:block;
-  font-size:9px;
-  letter-spacing:3px;
-  margin-top:5px;
-  color:#bd9ba8;
+  margin-bottom:25px;
 }
 .search {
   width:100%;
-  border:1px solid var(--line);
-  padding:14px 18px;
-  background:#fffdfb;
-  color:var(--text);
-  font-size:13px;
+  padding:13px 17px;
+  border:1px solid #e5cbd3;
+  border-radius:30px;
+  background:#fffaf8;
+  color:var(--ink);
+  font-family:inherit;
   outline:none;
-  box-shadow:inset 0 0 0 3px #faf2f5;
 }
-.search:focus {border-color:var(--pink);}
 .filters {
   display:flex;
-  flex-wrap:wrap;
   justify-content:center;
-  gap:9px;
-  margin:18px 0 28px;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:17px 0;
 }
-.filters button {
-  background:#fffdfb;
-  color:#a87c8e;
-  border:1px solid var(--line);
-  padding:10px 16px;
+.filter {
+  border:1px solid #e3c6ce;
+  background:#fffaf8;
+  color:#a47d89;
+  padding:9px 15px;
+  border-radius:22px;
   font-family:inherit;
   font-size:12px;
   cursor:pointer;
 }
-.filters button.active {
-  background:#d6b0bf;
-  color:white;
-  border-color:#d6b0bf;
-}
+.filter.active {background:#c99eaa;color:white}
 .grid {
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:17px;
 }
 .card {
-  position:relative;
-  background:#fffdfb;
-  border:1px solid #e8d5dd;
-  padding:8px;
-  box-shadow:0 5px 15px #b88da515;
+  background:#fffaf7;
+  border:1px solid #ead6dc;
+  border-radius:13px;
+  overflow:hidden;
+  box-shadow:0 5px 15px #b98e9912;
 }
-.card-inner {
-  border:1px solid #f0e1e7;
-  padding:10px;
-  position:relative;
-}
-.image {
-  height:150px;
-  display:grid;
-  place-items:center;
-  background:linear-gradient(135deg,#f5e7ed,#fffaf5,#f0e0e7);
-  border:1px solid #eee0e6;
-  color:#bd8ca2;
-  font-size:42px;
-}
-.favorite {
-  position:absolute;
-  top:15px;
-  right:15px;
-  z-index:2;
-  width:34px;
-  height:34px;
-  border-radius:50%;
-  border:1px solid var(--line);
-  background:#fffaf5;
-  color:#c58da5;
-  font-size:19px;
-  cursor:pointer;
-}
-.favorite.active {
-  background:#d6b0bf;
-  color:white;
-}
-.card-content {padding:13px 5px 7px;}
-.tag {
-  color:#bd8ba2;
-  font-size:10px;
-  letter-spacing:2px;
-}
-.card h3 {
-  color:#986e81;
-  font-weight:normal;
-  font-size:18px;
-  margin:8px 0;
-}
-.card p {
-  font-size:12px;
-  line-height:1.8;
-  min-height:40px;
-}
-.copy {
+.photo {
   width:100%;
-  padding:11px;
-  background:linear-gradient(90deg,#c994aa,#dfb9c8);
-  color:white;
-  border:1px solid #d2a6b8;
+  aspect-ratio:4/5;
+  background:#f4e5e9;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#bd98a3;
+  font-size:34px;
+  overflow:hidden;
+}
+.photo img {width:100%;height:100%;object-fit:cover}
+.card-content {padding:14px}
+.card h3 {font-size:15px;margin:0 0 8px;font-weight:500}
+.meta {font-size:10px;color:#b18a96;margin-bottom:10px}
+.desc {font-size:11px;line-height:1.8;white-space:pre-wrap}
+.prompt-box {
+  margin-top:12px;
+  padding:10px;
+  border-radius:8px;
+  background:#f8eef0;
+  font-size:10px;
+  line-height:1.7;
+  overflow-wrap:anywhere;
+  white-space:pre-wrap;
+}
+.actions {display:flex;gap:7px;margin-top:12px}
+.actions button {
+  flex:1;
+  padding:9px 5px;
+  border:1px solid #dfc2cb;
+  background:#fff;
+  border-radius:20px;
+  color:#a47786;
   font-family:inherit;
-  letter-spacing:2px;
+  font-size:11px;
   cursor:pointer;
 }
+.actions button:hover {background:#f7e9ed}
 .empty {
   text-align:center;
-  padding:35px;
-  color:#bd8ba2;
-  grid-column:1/-1;
+  padding:55px 10px;
+  color:#b18a96;
+  font-size:13px;
+  line-height:2.2;
 }
 footer {
   text-align:center;
-  padding:30px 12px;
-  border-top:3px double var(--line);
-  background:#f7edf1;
-  color:#a98293;
-  font-size:11px;
+  padding:25px;
+  font-family:'Cormorant Garamond',serif;
+  color:#b18a96;
   letter-spacing:2px;
-  line-height:2.2;
+  font-size:13px;
 }
-@media(max-width:480px) {
-  header {padding:45px 10px 30px;}
-  header:before,header:after {font-size:28px;top:17px;}
-  .grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
-  .image {height:115px;}
-  .card h3 {font-size:15px;}
-  .card p {font-size:11px;}
-  .filters button {padding:8px 12px;}
+@media(max-width:500px) {
+  h1 {font-size:46px}
+  .grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .card-content {padding:10px}
+  .card h3 {font-size:13px}
+  .actions {flex-direction:column}
 }
 </style>
 </head>
 <body>
-
 <header>
-  <div class="ornament">୨୧ ♡ ୨୧ ♡ ୨୧</div>
+  <div class="decor">୨୧ ♡ ୨୧</div>
   <h1>mycloset</h1>
   <div class="subtitle">MY LITTLE DOLLCORE WARDROBE</div>
-  <div class="header-note">✧ A COLLECTION OF LOVELY OUTFITS ✧</div>
-  <div class="ornament" style="margin-top:20px">♡ ───── 🎀 ───── ♡</div>
+  <div class="ribbon">🎀 ♡ 🎀</div>
 </header>
 
 <main>
   <div class="intro">
-    <div class="heart">୨୧ ♡ ୨୧</div>
-    Welcome to my little closet.<br>
-    お気に入りのお洋服とプロンプトを集めた、<br>
-    小さなアンティークドールのお部屋。<br>
-    <div class="heart">✧ Find your favorite outfit ✧</div>
+    お気に入りのプロンプトを集めた、小さなクローゼット。<br>
+    Choose your favorite style ♡
   </div>
 
-  <h2 class="section-title">
-    ♡ My Collection ♡
-    <small>MY LITTLE WARDROBE</small>
-  </h2>
+  <input id="search" class="search" placeholder="⌕  お洋服・プロンプトを検索...">
 
-  <input class="search" id="search"
-    placeholder="♡ お洋服・キーワードを検索...">
-
-  <div class="filters" id="filters">
-    <button class="active" data-category="all">All</button>
-    <button data-category="男の子">Boys ♡</button>
-    <button data-category="女の子">Girls ♡</button>
-    <button data-category="共通">Unisex ♡</button>
-    <button data-category="♡">♡ Favorites</button>
+  <div class="filters">
+    <button class="filter active" data-category="all">ALL</button>
+    <button class="filter" data-category="男の子">BOYS</button>
+    <button class="filter" data-category="女の子">GIRLS</button>
+    <button class="filter" data-category="共通">UNISEX</button>
+    <button class="filter" data-category="favorite">♡ FAVORITES</button>
   </div>
 
-  <div class="grid" id="grid"></div>
+  <div id="grid" class="grid"></div>
+  <div id="empty" class="empty">
+    ୨୧ ♡ ୨୧<br>
+    まだお洋服がありません。<br>
+    これから少しずつ増やしていこうね ♡
+  </div>
 </main>
 
-<footer>
-  ୨୧ ───── ♡ ───── ୨୧<br>
-  mycloset<br>
-  A LITTLE WORLD FULL OF RIBBONS & ROSES<br>
-  ୨୧ ───── ♡ ───── ୨୧
-</footer>
+<footer>♡ mycloset ♡</footer>
 
 <script>
-const outfits = [
-  {
-    name:"Sweet Doll Dress",
-    category:"女の子",
-    model:"SDXL",
-    description:"リボンとレースをたっぷり使ったドールドレス。",
-    prompt:"masterpiece, best quality, 1girl, sweet doll dress, frilly lace, satin ribbons, pearl ornaments, layered skirt, elegant pink and white color palette"
-  },
-  {
-    name:"Gothic Prince",
-    category:"男の子",
-    model:"SDXL",
-    description:"黒レースと装飾が美しいゴシック衣装。",
-    prompt:"masterpiece, best quality, 1boy, gothic prince outfit, black lace, velvet ribbons, ornate jacket, elegant gothic fashion"
-  },
-  {
-    name:"Antique Ribbon",
-    category:"共通",
-    model:"SDXL",
-    description:"男女どちらにも使えるクラシカルな衣装。",
-    prompt:"masterpiece, best quality, elegant antique fashion, ivory lace, satin ribbon, pearl details, vintage clothing, delicate frills"
-  }
-];
+// お洋服を追加するときは、この配列の中にデータを追加します。
+// 画像はGitHubにアップロードした画像のURLを指定できます。
+const outfits = [];
 
-let selected = "all";
-let favorites = JSON.parse(localStorage.getItem("mycloset-favorites") || "[]");
+let category = 'all';
+let favorites = JSON.parse(localStorage.getItem('mycloset-favorites') || '[]');
+
+const grid = document.getElementById('grid');
+const empty = document.getElementById('empty');
+const search = document.getElementById('search');
 
 function render() {
-  const query = document.getElementById("search").value.toLowerCase();
+  const word = search.value.toLowerCase();
 
-  const filtered = outfits.filter((item,index) => {
-    const categoryMatch =
-      selected === "all" ||
-      (selected === "♡" && favorites.includes(index)) ||
-      item.category === selected;
+  const list = outfits.filter(item => {
+    const text = [
+      item.name, item.category, item.model,
+      item.description,
+      ...(item.prompts || []).map(p => p.text)
+    ].join(' ').toLowerCase();
 
-    const textMatch =
-      (item.name + item.description + item.prompt + item.model)
-      .toLowerCase().includes(query);
+    const matchWord = text.includes(word);
+    const matchCategory =
+      category === 'all' ||
+      (category === 'favorite'
+        ? favorites.includes(item.id)
+        : item.category === category);
 
-    return categoryMatch && textMatch;
+    return matchWord && matchCategory;
   });
 
-  document.getElementById("grid").innerHTML =
-    filtered.map(item => {
-      const index = outfits.indexOf(item);
-      const isFavorite = favorites.includes(index);
+  grid.innerHTML = '';
+  empty.style.display = list.length ? 'none' : 'block';
 
-      return `
-      <article class="card">
-        <div class="card-inner">
-          <button class="favorite ${isFavorite ? "active" : ""}"
-            data-favorite="${index}">
-            ${isFavorite ? "♥" : "♡"}
-          </button>
-          <div class="image">🎀</div>
-          <div class="card-content">
-            <div class="tag">${item.category} ♡ ${item.model}</div>
-            <h3>${item.name}</h3>
-            <p>${item.description}</p>
-            <button class="copy" data-copy="${index}">
-              ♡ COPY PROMPT ♡
-            </button>
-          </div>
-        </div>
-      </article>`;
-    }).join("") || '<div class="empty">♡ No outfits found ♡</div>';
+  list.forEach(item => {
+    const card = document.createElement('article');
+    card.className = 'card';
+
+    const photo = document.createElement('div');
+    photo.className = 'photo';
+
+    if (item.image) {
+      const img = document.createElement('img');
+      img.src = item.image;
+      img.alt = item.name || 'outfit';
+      img.onerror = () => { photo.textContent = '🎀'; };
+      photo.appendChild(img);
+    } else {
+      photo.textContent = '🎀';
+    }
+
+    const content = document.createElement('div');
+    content.className = 'card-content';
+
+    const title = document.createElement('h3');
+    title.textContent = item.name || 'Untitled';
+
+    const meta = document.createElement('div');
+    meta.className = 'meta';
+    meta.textContent = `${item.category || ''}  ♡  ${item.model || ''}`;
+
+    const desc = document.createElement('div');
+    desc.className = 'desc';
+    desc.textContent = item.description || '';
+
+    content.append(title, meta, desc);
+
+    (item.prompts || []).forEach((p, i) => {
+      const promptTitle = document.createElement('div');
+      promptTitle.className = 'meta';
+      promptTitle.style.marginTop = '12px';
+      promptTitle.textContent = p.title || `PROMPT ${i + 1}`;
+
+      const prompt = document.createElement('div');
+      prompt.className = 'prompt-box';
+      prompt.textContent = p.text || '';
+
+      const copy = document.createElement('button');
+      copy.className = 'filter';
+      copy.style.marginTop = '8px';
+      copy.textContent = '♡ COPY PROMPT';
+      copy.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(p.text || '');
+          copy.textContent = 'COPIED ♡';
+        } catch {
+          copy.textContent = 'コピーできませんでした';
+        }
+      });
+
+      content.append(promptTitle, prompt, copy);
+    });
+
+    const actions = document.createElement('div');
+    actions.className = 'actions';
+
+    const fav = document.createElement('button');
+    fav.textContent = favorites.includes(item.id) ? '♥ FAVORITE' : '♡ FAVORITE';
+    fav.addEventListener('click', () => {
+      favorites = favorites.includes(item.id)
+        ? favorites.filter(id => id !== item.id)
+        : [...favorites, item.id];
+      localStorage.setItem('mycloset-favorites', JSON.stringify(favorites));
+      render();
+    });
+
+    actions.appendChild(fav);
+    content.appendChild(actions);
+    card.append(photo, content);
+    grid.appendChild(card);
+  });
 }
 
-document.getElementById("search").addEventListener("input",render);
-
-document.getElementById("filters").addEventListener("click",e=>{
-  if(!e.target.matches("button")) return;
-  selected=e.target.dataset.category;
-
-  document.querySelectorAll(".filters button").forEach(button=>{
-    button.classList.toggle("active",button===e.target);
-  });
-  render();
-});
-
-document.getElementById("grid").addEventListener("click",async e=>{
-  const favoriteButton=e.target.closest("[data-favorite]");
-  if(favoriteButton) {
-    const index=Number(favoriteButton.dataset.favorite);
-
-    if(favorites.includes(index)) {
-      favorites=favorites.filter(i=>i!==index);
-    } else {
-      favorites.push(index);
-    }
-
-    localStorage.setItem("mycloset-favorites",JSON.stringify(favorites));
+document.querySelectorAll('.filter[data-category]').forEach(button => {
+  button.addEventListener('click', () => {
+    category = button.dataset.category;
+    document.querySelectorAll('.filter[data-category]').forEach(b => {
+      b.classList.toggle('active', b === button);
+    });
     render();
-    return;
-  }
-
-  const copyButton=e.target.closest("[data-copy]");
-  if(copyButton) {
-    const index=Number(copyButton.dataset.copy);
-
-    try {
-      await navigator.clipboard.writeText(outfits[index].prompt);
-      copyButton.textContent="♡ COPIED! ♡";
-    } catch {
-      copyButton.textContent="COPY FAILED";
-    }
-  }
+  });
 });
 
+search.addEventListener('input', render);
 render();
 </script>
 </body>
