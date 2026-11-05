@@ -60,4 +60,4 @@ image: "punk.JPG",
         text: "abandoned underground fashion studio, graffiti-covered walls, old speakers, scattered vinyl records, red neon light, dark industrial atmosphere"
       }
     ]
-  },
+  };
