@@ -30,7 +30,7 @@ image: "hagu.JPG",
       }
     ]
   }
-];
+],
   {
     id: "work-002",
     name: "🪑❤️‍🩹",
