@@ -104,16 +104,16 @@ function render() {
           <div class="card-desc">${item.description || ''}</div>
 
           <div class="copy-buttons">
-            <button class="copy-btn" data-label="♡ 服" onclick="copyText(this, \`${clothesText.replace(/`/g, '\\`')}\`)">
-              ♡ 服
-            </button>
-            <button class="copy-btn" data-label="♡ 構図" onclick="copyText(this, \`${compositionText.replace(/`/g, '\\`')}\`)">
-              ♡ 構図
-            </button>
-            <button class="copy-btn" data-label="♡ 背景" onclick="copyText(this, \`${backgroundText.replace(/`/g, '\\`')}\`)">
-              ♡ 背景
-            </button>
-          </div>
+  <button class="copy-btn" data-label="服" onclick="copyText(this, \`${clothesText.replace(/`/g, '\\`')}\`)">
+    服
+  </button>
+  <button class="copy-btn" data-label="構図" onclick="copyText(this, \`${compositionText.replace(/`/g, '\\`')}\`)">
+    構図
+  </button>
+  <button class="copy-btn" data-label="背景" onclick="copyText(this, \`${backgroundText.replace(/`/g, '\\`')}\`)">
+    背景
+  </button>
+</div>
         </div>
       </div>
     `;
