@@ -36,7 +36,7 @@ image: "hagu.JPG",
     name: "🪑❤️‍🩹",
     category: "女の子",
     description: "Punk Lolita Collection",
-
+image: "punk.JPG",
     clothes: [
       {
         title: "Punk Lolita Outfit",
