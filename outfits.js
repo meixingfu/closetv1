@@ -19,8 +19,8 @@ image: "hagu.JPG",
         title: "Hugging a Teddy Bear",
         model: "SDXL",
         text: "sitting on an old wooden chair, hugging a worn teddy bear, head slightly tilted, innocent but unsettling smile, one leg crossed over the other, close-up, slightly low angle"
-      }
-    ],
+      },
+  
 
     background: [
       {
@@ -59,5 +59,6 @@ image: "punk.JPG",
         model: "SDXL",
         text: "abandoned underground fashion studio, graffiti-covered walls, old speakers, scattered vinyl records, red neon light, dark industrial atmosphere"
       }
-    ]
-  };
+      }
+];
+  
