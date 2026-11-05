@@ -229,49 +229,46 @@ header {
   line-height: 1.35;
 }
 
-/* 横並びハート風ボタン */
+/* 横並びハート型ボタン */
 .copy-buttons {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   margin-top: auto;
-  justify-content: space-between;
+  justify-content: center;
+  padding-top: 4px;
 }
 
 .copy-btn {
-  flex: 1;
-  height: 38px;
+  width: 48px;
+  height: 48px;
   border: none;
-  border-radius: 50px 50px 12px 12px; /* 上が丸くて下が少し尖る感じ */
-  background: #fce4ec;
+  background: #f8bbd0;
   color: #c2185b;
   font-family: inherit;
-  font-size: 0.7rem;
+  font-size: 0.62rem;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  box-shadow: 0 2px 6px rgba(194, 24, 91, 0.12);
-}
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 7px;
+  transition: all 0.2s ease;
+  box-shadow: 0 3px 8px rgba(194, 24, 91, 0.18);
 
-.copy-btn::before {
-  content: "♡";
-  font-size: 0.9rem;
-  margin-right: 3px;
-  opacity: 0.85;
+  /* ここがハートの形 */
+  clip-path: path("M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z");
+  transform: scale(1.15);
 }
 
 .copy-btn:hover {
-  background: #f8bbd0;
-  color: #ad1457;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(194, 24, 91, 0.2);
+  background: #f48fb1;
+  color: white;
+  transform: scale(1.25);
 }
 
 .copy-btn.copied {
-  background: #f48fb1;
+  background: #ec407a;
   color: white;
 }
 .empty-message {
