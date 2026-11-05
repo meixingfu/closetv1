@@ -31,3 +31,33 @@ image: "hagu.JPG",
     ]
   }
 ];
+  {
+    id: "work-002",
+    name: "🪑❤️‍🩹",
+    category: "女の子",
+    description: "Punk Lolita Collection",
+
+    clothes: [
+      {
+        title: "Punk Lolita Outfit",
+        model: "SDXL",
+        text: "punk lolita outfit, black layered ruffled blouse, asymmetrical black tartan skirt, fitted corset-style waistcoat, silver buckles, safety-pin details, chains, striped ribbon, lace cuffs, platform ankle boots, black and crimson color palette, elegant but rebellious"
+      }
+    ],
+
+    composition: [
+      {
+        title: "Chair Pose",
+        model: "SDXL",
+        text: "dynamic three-quarter pose, sitting sideways on a chair, one elbow resting on the backrest, confident gaze toward viewer, slightly messy posture, low angle"
+      }
+    ],
+
+    background: [
+      {
+        title: "Underground Fashion Studio",
+        model: "SDXL",
+        text: "abandoned underground fashion studio, graffiti-covered walls, old speakers, scattered vinyl records, red neon light, dark industrial atmosphere"
+      }
+    ]
+  },
