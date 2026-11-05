@@ -61,5 +61,36 @@ window.outfits = [
         text: "abandoned underground fashion studio, graffiti-covered walls, old speakers, scattered vinyl records, red neon light, dark industrial atmosphere"
       }
     ]
-  }
-];
+  },
+  },
+
+  {
+    id: "work-003",
+    name: "💐🤍",
+    category: "女の子",
+    description: "Vintage Floral Collection",
+
+    clothes: [
+      {
+        title: "Vintage Floral Outfit",
+        model: "SDXL",
+        text: "vintage floral fashion, dusty rose high-neck blouse, delicate puff sleeves, antique lace collar, floral embroidered corset waist, layered vintage flower-print skirt, lace gloves, cameo brooch, antique key necklace, floral bonnet decorated with fresh roses and long ribbons, vintage lace-up boots"
+      }
+    ],
+
+    composition: [
+      {
+        title: "Bouquet and Antique Chair",
+        model: "SDXL",
+        text: "sitting sideways on an antique chair, holding a large bouquet close to her chest, looking over her shoulder"
+      }
+    ],
+
+    background: [
+      {
+        title: "Antique European Mansion",
+        model: "SDXL",
+        text: "antique European mansion, stained glass windows, vintage flower vases, dried flowers, old paintings, lace curtains, warm candlelight, elegant romantic composition, soft vintage atmosphere"
+      }
+    ]
+  };
