@@ -1,11 +1,11 @@
-
 window.outfits = [
   {
     id: "work-001",
     name: "🧸 はぐ",
     category: "共通",
     description: "Haunted Teddy Bear Collection",
-image: "hagu.JPG",
+    image: "hagu.JPG",
+
     clothes: [
       {
         title: "Haunted Teddy Bear Outfit",
@@ -19,8 +19,8 @@ image: "hagu.JPG",
         title: "Hugging a Teddy Bear",
         model: "SDXL",
         text: "sitting on an old wooden chair, hugging a worn teddy bear, head slightly tilted, innocent but unsettling smile, one leg crossed over the other, close-up, slightly low angle"
-      },
-  
+      }
+    ],
 
     background: [
       {
@@ -29,14 +29,15 @@ image: "hagu.JPG",
         text: "abandoned children's bedroom, antique toys scattered across the floor, old rocking horse, cracked wallpaper, dusty curtains, moonlight through the window, floating dust, dim candlelight"
       }
     ]
-  }
-],
+  },
+
   {
     id: "work-002",
     name: "🪑❤️‍🩹",
     category: "女の子",
     description: "Punk Lolita Collection",
-image: "punk.JPG",
+    image: "punk.JPG",
+
     clothes: [
       {
         title: "Punk Lolita Outfit",
@@ -59,6 +60,6 @@ image: "punk.JPG",
         model: "SDXL",
         text: "abandoned underground fashion studio, graffiti-covered walls, old speakers, scattered vinyl records, red neon light, dark industrial atmosphere"
       }
-      }
+    ]
+  }
 ];
-  
