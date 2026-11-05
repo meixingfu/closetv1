@@ -1,0 +1,253 @@
+:root {
+  --bg: #fdf6f8;
+  --pink: #e8b4bc;
+  --pink-soft: #f8e8ec;
+  --pink-deep: #c98a96;
+  --text: #6b5a60;
+  --text-light: #a08a92;
+  --white: #ffffff;
+  --radius: 18px;
+  --shadow: 0 8px 28px rgba(200, 150, 160, 0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 40px 16px 80px;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+/* ヘッダー */
+header { text-align: center; margin-bottom: 36px; }
+
+.header-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: var(--pink);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+}
+
+.main-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.4rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--pink-deep);
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.sub-title {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  color: var(--text-light);
+  margin-bottom: 16px;
+}
+
+.bow-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  font-size: 1.1rem;
+  color: var(--pink);
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 36px;
+  color: var(--text-light);
+  font-size: 0.92rem;
+}
+.intro .en { margin-top: 4px; font-size: 0.88rem; }
+
+/* 検索・カテゴリ */
+.controls { margin-bottom: 36px; }
+
+.search-box { margin-bottom: 20px; }
+
+.search-box input {
+  width: 100%;
+  padding: 14px 22px;
+  border: 1px solid #f0d6dc;
+  border-radius: 999px;
+  background: var(--white);
+  font-family: inherit;
+  font-size: 0.92rem;
+  color: var(--text);
+  outline: none;
+  box-shadow: var(--shadow);
+}
+
+.search-box input:focus {
+  border-color: var(--pink);
+  box-shadow: 0 8px 24px rgba(200, 150, 160, 0.18);
+}
+
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.cat-btn {
+  padding: 9px 18px;
+  border: 1px solid #f0d6dc;
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--pink-deep);
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+.cat-btn:hover { background: var(--pink-soft); }
+.cat-btn.active {
+  background: var(--pink-deep);
+  border-color: var(--pink-deep);
+  color: white;
+}
+
+/* カード（2列） */
+.prompt-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid #f5e0e6;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(200, 150, 160, 0.18);
+}
+
+.card-image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--pink-soft);
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 16px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 6px;
+  gap: 8px;
+}
+
+.card-title {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--pink-deep);
+  line-height: 1.35;
+}
+
+.fav-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #e0c0c8;
+  line-height: 1;
+  padding: 0;
+}
+.fav-btn.active { color: #e88a9c; }
+
+.card-desc {
+  font-size: 0.78rem;
+  color: var(--text-light);
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+/* 3つのコピーボタン */
+.copy-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.copy-btn {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #f0d6dc;
+  border-radius: 12px;
+  background: var(--white);
+  color: var(--pink-deep);
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.copy-btn:hover {
+  background: var(--pink-soft);
+}
+
+.copy-btn.copied {
+  background: #d4edda;
+  border-color: #a8d5b5;
+  color: #2e7d4f;
+}
+
+.empty-message {
+  text-align: center;
+  color: var(--text-light);
+  margin-top: 60px;
+  grid-column: 1 / -1;
+}
+
+/* スマホは1列 */
+@media (max-width: 560px) {
+  .prompt-grid { grid-template-columns: 1fr; }
+  .main-title { font-size: 2.8rem; }
+}
