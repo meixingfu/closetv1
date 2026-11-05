@@ -5,7 +5,7 @@ window.outfits = [
     name: "🧸 はぐ",
     category: "共通",
     description: "Haunted Teddy Bear Collection",
-
+image: "hagu.jpg",
     clothes: [
       {
         title: "Haunted Teddy Bear Outfit",
