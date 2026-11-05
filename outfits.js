@@ -85,11 +85,12 @@ image:"vintagegirl.JPG",
       }
     ],
 
-    background: [
+        background: [
       {
         title: "Antique European Mansion",
         model: "SDXL",
         text: "antique European mansion, stained glass windows, vintage flower vases, dried flowers, old paintings, lace curtains, warm candlelight, elegant romantic composition, soft vintage atmosphere"
       }
-    ];
-  
+    ]
+  }
+];
