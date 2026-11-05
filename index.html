@@ -19,9 +19,7 @@
 body {
   margin:0;
   color:var(--ink);
-  background:
-    radial-gradient(ellipse at top,#fff 0%,transparent 65%),
-    #f7eef0;
+  background:radial-gradient(ellipse at top,#fff 0%,transparent 65%),#f7eef0;
   font-family:'Noto Serif JP',serif;
 }
 header {
@@ -42,105 +40,81 @@ h1 {
 .subtitle {font-size:9px;letter-spacing:3px;color:#b9949e}
 .ribbon {font-size:22px;margin-top:12px}
 main {max-width:1000px;margin:auto;padding:25px 16px 60px}
-.intro {
-  text-align:center;
-  font-size:12px;
-  line-height:2;
-  margin-bottom:25px;
-}
+.intro {text-align:center;font-size:12px;line-height:2;margin-bottom:25px}
 .search {
-  width:100%;
-  padding:13px 17px;
-  border:1px solid #e5cbd3;
-  border-radius:30px;
-  background:#fffaf8;
-  color:var(--ink);
-  font-family:inherit;
-  outline:none;
+  width:100%;padding:13px 17px;border:1px solid #e5cbd3;
+  border-radius:30px;background:#fffaf8;color:var(--ink);
+  font-family:inherit;outline:none;
 }
 .filters {
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:8px;
-  margin:17px 0;
+  display:flex;justify-content:center;flex-wrap:wrap;
+  gap:8px;margin:17px 0;
 }
 .filter {
-  border:1px solid #e3c6ce;
-  background:#fffaf8;
-  color:#a47d89;
-  padding:9px 15px;
-  border-radius:22px;
-  font-family:inherit;
-  font-size:12px;
-  cursor:pointer;
+  border:1px solid #e3c6ce;background:#fffaf8;color:#a47d89;
+  padding:9px 15px;border-radius:22px;font-family:inherit;
+  font-size:12px;cursor:pointer;
 }
 .filter.active {background:#c99eaa;color:white}
 .grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
   gap:17px;
 }
 .card {
-  background:#fffaf7;
-  border:1px solid #ead6dc;
-  border-radius:13px;
-  overflow:hidden;
-  box-shadow:0 5px 15px #b98e9912;
+  background:#fffaf7;border:1px solid #ead6dc;border-radius:13px;
+  overflow:hidden;box-shadow:0 5px 15px #b98e9912;
 }
 .photo {
-  width:100%;
-  aspect-ratio:4/5;
-  background:#f4e5e9;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#bd98a3;
-  font-size:34px;
-  overflow:hidden;
+  width:100%;aspect-ratio:4/5;background:#f4e5e9;
+  display:flex;align-items:center;justify-content:center;
+  color:#bd98a3;font-size:34px;overflow:hidden;
 }
 .photo img {width:100%;height:100%;object-fit:cover}
 .card-content {padding:14px}
 .card h3 {font-size:15px;margin:0 0 8px;font-weight:500}
 .meta {font-size:10px;color:#b18a96;margin-bottom:10px}
 .desc {font-size:11px;line-height:1.8;white-space:pre-wrap}
-.prompt-box {
-  margin-top:12px;
-  padding:10px;
-  border-radius:8px;
-  background:#f8eef0;
-  font-size:10px;
-  line-height:1.7;
+.section {
+  margin-top:15px;padding:11px;border-radius:9px;
+  background:#f8eef0;border:1px solid #f0dfe4;
+}
+.section-title {
+  font-size:12px;color:#a47786;margin-bottom:9px;
+  letter-spacing:1px;
+}
+.prompt-item {
+  padding:9px;margin-top:8px;background:#fffaf8;
+  border-radius:7px;
+}
+.prompt-name {font-size:11px;color:#a47786;margin-bottom:5px}
+.model-tag {
+  display:inline-block;font-size:9px;color:#a47786;
+  background:#f5e5ea;border-radius:12px;padding:3px 8px;
+  margin-bottom:7px;
+}
+.prompt-text {
+  font-size:10px;line-height:1.7;white-space:pre-wrap;
   overflow-wrap:anywhere;
-  white-space:pre-wrap;
+}
+.copy {
+  margin-top:8px;padding:7px 13px;border:1px solid #dfc2cb;
+  background:white;border-radius:20px;color:#a47786;
+  font-family:inherit;font-size:10px;cursor:pointer;
 }
 .actions {display:flex;gap:7px;margin-top:12px}
 .actions button {
-  flex:1;
-  padding:9px 5px;
-  border:1px solid #dfc2cb;
-  background:#fff;
-  border-radius:20px;
-  color:#a47786;
-  font-family:inherit;
-  font-size:11px;
-  cursor:pointer;
+  flex:1;padding:9px 5px;border:1px solid #dfc2cb;
+  background:#fff;border-radius:20px;color:#a47786;
+  font-family:inherit;font-size:11px;cursor:pointer;
 }
-.actions button:hover {background:#f7e9ed}
+.actions button:hover,.copy:hover {background:#f7e9ed}
 .empty {
-  text-align:center;
-  padding:55px 10px;
-  color:#b18a96;
-  font-size:13px;
-  line-height:2.2;
+  text-align:center;padding:55px 10px;color:#b18a96;
+  font-size:13px;line-height:2.2;
 }
 footer {
-  text-align:center;
-  padding:25px;
-  font-family:'Cormorant Garamond',serif;
-  color:#b18a96;
-  letter-spacing:2px;
-  font-size:13px;
+  text-align:center;padding:25px;font-family:'Cormorant Garamond',serif;
+  color:#b18a96;letter-spacing:2px;font-size:13px;
 }
 @media(max-width:500px) {
   h1 {font-size:46px}
@@ -165,7 +139,7 @@ footer {
     Choose your favorite style ♡
   </div>
 
-  <input id="search" class="search" placeholder="⌕  お洋服・プロンプトを検索...">
+  <input id="search" class="search" placeholder="⌕  お洋服・構図・背景を検索...">
 
   <div class="filters">
     <button class="filter active" data-category="all">ALL</button>
@@ -178,7 +152,7 @@ footer {
   <div id="grid" class="grid"></div>
   <div id="empty" class="empty">
     ୨୧ ♡ ୨୧<br>
-    まだお洋服がありません。<br>
+    まだ作品がありません。<br>
     これから少しずつ増やしていこうね ♡
   </div>
 </main>
@@ -186,11 +160,8 @@ footer {
 <footer>♡ mycloset ♡</footer>
 
 <script src="outfits.js"></script>
-  <script>
-// お洋服を追加するときは、この配列の中にデータを追加します。
-// 画像はGitHubにアップロードした画像のURLを指定できます。
+<script>
 const outfits = window.outfits || [];
-
 let category = 'all';
 let favorites = JSON.parse(localStorage.getItem('mycloset-favorites') || '[]');
 
@@ -198,14 +169,24 @@ const grid = document.getElementById('grid');
 const empty = document.getElementById('empty');
 const search = document.getElementById('search');
 
+const sections = [
+  {key:'clothes', label:'♡ CLOTHES / 服'},
+  {key:'composition', label:'♡ COMPOSITION / 構図'},
+  {key:'background', label:'♡ BACKGROUND / 背景'}
+];
+
 function render() {
   const word = search.value.toLowerCase();
 
   const list = outfits.filter(item => {
+    const promptText = sections.flatMap(s =>
+      (item[s.key] || []).map(p =>
+        [p.title, p.model, p.text].join(' ')
+      )
+    ).join(' ');
+
     const text = [
-      item.name, item.category, item.model,
-      item.description,
-      ...(item.prompts || []).map(p => p.text)
+      item.name, item.category, item.description, promptText
     ].join(' ').toLowerCase();
 
     const matchWord = text.includes(word);
@@ -246,7 +227,7 @@ function render() {
 
     const meta = document.createElement('div');
     meta.className = 'meta';
-    meta.textContent = `${item.category || ''}  ♡  ${item.model || ''}`;
+    meta.textContent = item.category || '';
 
     const desc = document.createElement('div');
     desc.className = 'desc';
@@ -254,30 +235,51 @@ function render() {
 
     content.append(title, meta, desc);
 
-    (item.prompts || []).forEach((p, i) => {
-      const promptTitle = document.createElement('div');
-      promptTitle.className = 'meta';
-      promptTitle.style.marginTop = '12px';
-      promptTitle.textContent = p.title || `PROMPT ${i + 1}`;
+    sections.forEach(section => {
+      const prompts = item[section.key] || [];
+      if (!prompts.length) return;
 
-      const prompt = document.createElement('div');
-      prompt.className = 'prompt-box';
-      prompt.textContent = p.text || '';
+      const box = document.createElement('div');
+      box.className = 'section';
 
-      const copy = document.createElement('button');
-      copy.className = 'filter';
-      copy.style.marginTop = '8px';
-      copy.textContent = '♡ COPY PROMPT';
-      copy.addEventListener('click', async () => {
-        try {
-          await navigator.clipboard.writeText(p.text || '');
-          copy.textContent = 'COPIED ♡';
-        } catch {
-          copy.textContent = 'コピーできませんでした';
-        }
+      const heading = document.createElement('div');
+      heading.className = 'section-title';
+      heading.textContent = section.label;
+      box.appendChild(heading);
+
+      prompts.forEach((p, i) => {
+        const itemBox = document.createElement('div');
+        itemBox.className = 'prompt-item';
+
+        const name = document.createElement('div');
+        name.className = 'prompt-name';
+        name.textContent = p.title || `PROMPT ${i + 1}`;
+
+        const model = document.createElement('span');
+        model.className = 'model-tag';
+        model.textContent = p.model || 'その他';
+
+        const text = document.createElement('div');
+        text.className = 'prompt-text';
+        text.textContent = p.text || '';
+
+        const copy = document.createElement('button');
+        copy.className = 'copy';
+        copy.textContent = '♡ COPY PROMPT';
+        copy.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(p.text || '');
+            copy.textContent = 'COPIED ♡';
+          } catch {
+            copy.textContent = 'コピーできませんでした';
+          }
+        });
+
+        itemBox.append(name, model, text, copy);
+        box.appendChild(itemBox);
       });
 
-      content.append(promptTitle, prompt, copy);
+      content.appendChild(box);
     });
 
     const actions = document.createElement('div');
