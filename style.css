@@ -229,57 +229,39 @@ header {
   line-height: 1.35;
 }
 
-/* 横並び・文字入りハート風ボタン（安定版） */
+/* 横並びシンプルボタン */
 .copy-buttons {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   margin-top: auto;
-  justify-content: center;
 }
 
 .copy-btn {
   flex: 1;
-  max-width: 70px;
-  height: 42px;
+  height: 36px;
   border: none;
-  border-radius: 40px 40px 14px 14px;
-  background: linear-gradient(180deg, #f8bbd0 0%, #f48fb1 100%);
-  color: #880e4f;
+  border-radius: 999px;
+  background: #fce8ec;
+  color: #c98a96;
   font-family: inherit;
   font-size: 0.72rem;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 3px 8px rgba(194, 24, 91, 0.18);
-  position: relative;
-}
-
-.copy-btn::before {
-  content: "♡";
-  position: absolute;
-  top: 2px;
-  font-size: 0.85rem;
-  opacity: 0.5;
-  color: #c2185b;
+  gap: 3px;
 }
 
 .copy-btn:hover {
-  background: linear-gradient(180deg, #f48fb1 0%, #ec407a 100%);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 12px rgba(194, 24, 91, 0.25);
-}
-
-.copy-btn:hover::before {
-  color: white;
-  opacity: 0.7;
+  background: #f8d0d8;
+  color: #c45a6e;
+  transform: translateY(-1px);
 }
 
 .copy-btn.copied {
-  background: #ec407a;
+  background: #f0b8c4;
   color: white;
 }
 
