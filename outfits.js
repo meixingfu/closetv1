@@ -69,7 +69,7 @@ window.outfits = [
     name: "💐🤍",
     category: "女の子",
     description: "Vintage Floral Collection",
-
+image:"vintagegirl.JPG",
     clothes: [
       {
         title: "Vintage Floral Outfit",
