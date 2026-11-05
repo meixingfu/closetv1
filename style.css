@@ -144,7 +144,7 @@ header {
   color: white;
 }
 
-/* カード（2列・コンパクト） */
+/* カード（2列） */
 .prompt-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -232,39 +232,48 @@ header {
 /* 横並びハート風ボタン */
 .copy-buttons {
   display: flex;
-  gap: 6px;
+  gap: 8px;
   margin-top: auto;
+  justify-content: space-between;
 }
 
 .copy-btn {
   flex: 1;
-  height: 36px;
+  height: 38px;
   border: none;
-  border-radius: 999px;
-  background: #fce8ec;
-  color: #c98a96;
+  border-radius: 50px 50px 12px 12px; /* 上が丸くて下が少し尖る感じ */
+  background: #fce4ec;
+  color: #c2185b;
   font-family: inherit;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3px;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(194, 24, 91, 0.12);
+}
+
+.copy-btn::before {
+  content: "♡";
+  font-size: 0.9rem;
+  margin-right: 3px;
+  opacity: 0.85;
 }
 
 .copy-btn:hover {
-  background: #f8d0d8;
-  color: #c45a6e;
-  transform: translateY(-1px);
+  background: #f8bbd0;
+  color: #ad1457;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(194, 24, 91, 0.2);
 }
 
 .copy-btn.copied {
-  background: #f0b8c4;
+  background: #f48fb1;
   color: white;
 }
-
 .empty-message {
   text-align: center;
   color: var(--text-light);
