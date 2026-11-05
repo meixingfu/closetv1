@@ -27,18 +27,22 @@ function isFavorite(id) {
 
 function copyText(btn, text) {
   if (!text) {
-    btn.textContent = 'データなし';
-    setTimeout(() => btn.textContent = btn.dataset.label, 1200);
+    const original = btn.dataset.label;
+    btn.textContent = 'なし';
+    setTimeout(() => {
+      btn.innerHTML = original;
+    }, 1100);
     return;
   }
+
   navigator.clipboard.writeText(text).then(() => {
     const original = btn.dataset.label;
-    btn.textContent = 'コピーしました！';
+    btn.textContent = '✓';
     btn.classList.add('copied');
     setTimeout(() => {
-      btn.textContent = original;
+      btn.innerHTML = original;
       btn.classList.remove('copied');
-    }, 1500);
+    }, 1400);
   });
 }
 
@@ -58,7 +62,7 @@ function render() {
     if (searchQuery) {
       const q = searchQuery.toLowerCase();
       const searchText = (
-        item.name + ' ' + 
+        (item.name || '') + ' ' +
         (item.description || '') + ' ' +
         (item.clothes?.[0]?.text || '') + ' ' +
         (item.composition?.[0]?.text || '') + ' ' +
@@ -83,16 +87,16 @@ function render() {
     const backgroundText = item.background?.[0]?.text || '';
 
     const imageSrc = item.image || '';
-    const imageHtml = imageSrc 
-      ? `<div class="card-image"><img src="${imageSrc}" alt="${item.name}" loading="lazy"></div>`
-      : `<div class="card-image" style="display:flex;align-items:center;justify-content:center;color:#c8a0a8;">No Image</div>`;
+    const imageHtml = imageSrc
+      ? `<div class="card-image"><img src="${imageSrc}" alt="${item.name || ''}" loading="lazy"></div>`
+      : `<div class="card-image" style="display:flex;align-items:center;justify-content:center;color:#c8a0a8;font-size:0.8rem;">No Image</div>`;
 
     return `
       <div class="card">
         ${imageHtml}
         <div class="card-body">
           <div class="card-header">
-            <div class="card-title">${item.name}</div>
+            <div class="card-title">${item.name || ''}</div>
             <button class="fav-btn ${isFavorite(item.id) ? 'active' : ''}" onclick="toggleFavorite('${item.id}')">
               ${isFavorite(item.id) ? '♥' : '♡'}
             </button>
@@ -100,16 +104,15 @@ function render() {
           <div class="card-desc">${item.description || ''}</div>
 
           <div class="copy-buttons">
-  <button class="copy-btn" data-label="♡ 服をコピー" onclick="copyText(this, \`${clothesText.replace(/`/g, '\\`')}\`)">
-    ♡ 服
-  </button>
-  <button class="copy-btn" data-label="♡ 構図をコピー" onclick="copyText(this, \`${compositionText.replace(/`/g, '\\`')}\`)">
-    ♡ 構図
-  </button>
-  <button class="copy-btn" data-label="♡ 背景をコピー" onclick="copyText(this, \`${backgroundText.replace(/`/g, '\\`')}\`)">
-    ♡ 背景
-  </button>
-</div>
+            <button class="copy-btn" data-label="♡ 服" onclick="copyText(this, \`${clothesText.replace(/`/g, '\\`')}\`)">
+              ♡ 服
+            </button>
+            <button class="copy-btn" data-label="♡ 構図" onclick="copyText(this, \`${compositionText.replace(/`/g, '\\`')}\`)">
+              ♡ 構図
+            </button>
+            <button class="copy-btn" data-label="♡ 背景" onclick="copyText(this, \`${backgroundText.replace(/`/g, '\\`')}\`)">
+              ♡ 背景
+            </button>
           </div>
         </div>
       </div>
