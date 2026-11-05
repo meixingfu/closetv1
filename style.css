@@ -229,41 +229,53 @@ header {
   line-height: 1.35;
 }
 
-/* 横並びハート型ボタン（文字入り） */
+/* 横並び・文字入りハート風ボタン（安定版） */
 .copy-buttons {
   display: flex;
   gap: 8px;
   margin-top: auto;
   justify-content: center;
-  padding-top: 6px;
 }
 
 .copy-btn {
-  width: 52px;
-  height: 48px;
+  flex: 1;
+  max-width: 70px;
+  height: 42px;
   border: none;
-  background: #f8bbd0;
-  color: #ad1457;
+  border-radius: 40px 40px 14px 14px;
+  background: linear-gradient(180deg, #f8bbd0 0%, #f48fb1 100%);
+  color: #880e4f;
   font-family: inherit;
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   font-weight: 600;
   cursor: pointer;
-  position: relative;
+  transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
-  box-shadow: 0 3px 8px rgba(194, 24, 91, 0.15);
-  line-height: 1;
+  box-shadow: 0 3px 8px rgba(194, 24, 91, 0.18);
+  position: relative;
+}
 
-  /* ハートの形 */
-  clip-path: path("M 25 45 L 5 22 C 0 12 8 0 20 0 C 25 0 28 4 30 8 C 32 4 35 0 40 0 C 52 0 60 12 55 22 Z");
+.copy-btn::before {
+  content: "♡";
+  position: absolute;
+  top: 2px;
+  font-size: 0.85rem;
+  opacity: 0.5;
+  color: #c2185b;
 }
 
 .copy-btn:hover {
-  background: #f48fb1;
+  background: linear-gradient(180deg, #f48fb1 0%, #ec407a 100%);
   color: white;
-  transform: scale(1.08);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(194, 24, 91, 0.25);
+}
+
+.copy-btn:hover::before {
+  color: white;
+  opacity: 0.7;
 }
 
 .copy-btn.copied {
