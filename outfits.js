@@ -62,7 +62,6 @@ window.outfits = [
       }
     ]
   },
-  },
 
   {
     id: "work-003",
@@ -92,5 +91,5 @@ image:"vintagegirl.JPG",
         model: "SDXL",
         text: "antique European mansion, stained glass windows, vintage flower vases, dried flowers, old paintings, lace curtains, warm candlelight, elegant romantic composition, soft vintage atmosphere"
       }
-    ]
-  };
+    ];
+  
